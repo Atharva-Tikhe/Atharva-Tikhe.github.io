@@ -1,0 +1,70 @@
+:root {
+    --primary: #004E64;
+    --accent: #00A5CF;
+    --main-bg: #F8FAFC;
+    --main-text: #1E293B;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #1E293B;
+  background-color: #F8FAFC;
+  overflow-x: hidden;
+  background: radial-gradient(ellipse at center, #0a0f1f 0%, #000 100%);
+}
+
+svg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  transform-style: preserve-3d;
+}
+
+.helix path {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* .navbar-brand {
+  color: #004E64 !important;
+}
+
+#hero {
+  position: relative;
+  overflow: hidden;
+}
+
+#dna-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.hero-content {
+  z-index: 2;
+  color: #1E293B;
+}
+
+.highlight {
+  color: #00A5CF;
+}
+
+.btn-outline-primary {
+  border-color: #00A5CF;
+  color: #00A5CF;
+}
+
+.btn-outline-primary:hover {
+  background-color: #00A5CF;
+  color: #fff;
+  transition: 0.3s ease;
+} */
