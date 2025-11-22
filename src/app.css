@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+
+:root {
+  --primary: #004e64;
+  --accent: #00a5cf;
+  --text: #bec4cd;
+  --bg-gradient: radial-gradient(ellipse at center, #003564 0%, #000 80%);
+  --font: 'Inter', sans-serif;
+  --bg: rgba(00, 15, 13, 0.5);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  /* color: var(--text); */
+  background: var(--bg-gradient);
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+/* === DNA Background === */
+#dna-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  transform-style: preserve-3d;
+  filter: blur(0.2rem);
+}
+
+/* === Hero Section === */
+#hero {
+  position: relative;
+  overflow: hidden;
+  color: var(--text);
+  height: 100vh;
+  scroll-snap-type: both;
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+/* === Buttons === */
+.btn-outline-primary {
+  border-color: var(--accent);
+  color: var(--accent);
+  transition: 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+
