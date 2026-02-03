@@ -8,17 +8,49 @@
         year: "2026",
         post: "Msc. Bioinformatics",
         location: "Newcastle University, UK",
-        imgSrc: "ncl-log.svg"
+        imgSrc: {src: "ncl-log.svg", width: "10%", height: "20%"}
     },
     {
         sectionHeader:"Education",
         year: "2024",
         post: "MTech. Bioengineering",
         location: "MIT ADT University, IN",
-        imgSrc: "mitu.png"
+        imgSrc: {src: "mitu.png", width: "10%", height: "20%"}
+    },
+    ];
+
+        let myexp: myObject[] = [{
+        sectionHeader:"Experience",
+        year: "2025",
+        post: "WebDev Volunteer",
+        location: "RFC UK, Newcastle upon Tyne, UK",
+        imgSrc: {src: "mg-logo.webp", width: "25%", height: "17%"}
+    },
+    {
+        sectionHeader:"Experience",
+        year: "2024-2025",
+        post: "Bioinformatics Engineer",
+        location: "MedGenome Labs, IN",
+        imgSrc: {src: "mg-logo.webp", width: "20%", height: "40%"}
     },
     ];
     
+    let myproj: myObject[] = [{
+        sectionHeader:"Projects",
+        year: "2025",
+        post: "Website",
+        location: "",
+        imgSrc: {src: "mg-logo.webp", width: "25%", height: "17%"}
+    },
+    {
+        sectionHeader:"Projects",
+        year: "2021",
+        post: "qPCR Animation Video",
+        location: "MIT ADT University, IN",
+        imgSrc: {src: "mg-logo.webp", width: "20%", height: "40%"}
+    },
+    ];
+
     // myobjs.push(o1);
     //<Section  sectionHeader="Education" year="2026" post="Msc. Bioinformatics" location="Newcastle University" imgSrc ="/static/lol" />
 
@@ -171,4 +203,18 @@
         
 </section>
 
-<Section objs = {myobjs} />
+<div class="grid grid-cols-2 h-dvh">
+    <div class=" col-1">
+        <Section objs = {myobjs} />
+    </div>
+    <div class=" col-2">
+        <Section objs = {myexp} />
+    </div>
+</div>
+
+
+<div class="grid grid-cols-2 h-dvh">
+    <div class=" col-1">
+        <Section objs = {myproj} />
+    </div>
+</div>

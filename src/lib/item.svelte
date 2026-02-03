@@ -20,69 +20,49 @@
     onMount(() => {
         let tl = gsap.timeline();
 
-        tl.to(".section", {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        scrollTrigger: {
-            trigger: ".section", 
-            start: "-200px center",
-            end: "bottom center",
-            scrub: true,
-        }
-        }).to(".line", {
-        height: "100%",
-        // ease: "none",
-        // duration: 3,
-        opacity: 1,
-        scrollTrigger : {
-            trigger: ".marker",
-            start: "-150px center",
-            end: "bottom center",
-            scrub: true
-        }
-        }).to(".marker", {
-            left : "-90px",
+        tl.to(".section-header", {
+            opacity: 1,
             scrollTrigger: {
-                trigger: ".marker", 
-                scrub: true
+                trigger: ".section-header", 
+                scrub: 1
             }
         })
-        .to(".year", {
-        left: "-50px",
-        // duration: 3,
-        scrollTrigger : {
-            trigger: "#post-container", 
-            start: "-150px center",
-            end: "bottom center",
-            scrub: 1,
-            // markers: true 
-        }
-        }).to(".box", {
-        left: "44px",
-        opacity: 1,
-        scrollTrigger: {
-            trigger: "#post-container",
-            start: "-150px center",
-            end: "bottom center",
-            scrub: 2
-        }
+        .to(".section", {opacity: 1})
+        .fromTo(["#post-container > *"],{x: -100, opacity: 0}, {
+            x: 0,
+            duration: 1,
+            opacity: 1,
+            stagger: 1,
+            ease: "power2.inOut",
+            scrollTrigger: {
+                trigger: "#post-container",
+                start: "-250px center",
+                scrub: 1
+            }
         })
-
-    })
+        
+    });
 </script>
 
 <div>
     {#if header}
-        <h3 class="section-header text-(--text) text-4xl font-bold my-5 mx-1 pl-12 pt-4">{item.sectionHeader}</h3>
+        <h3 class="section-header opacity-0 text-(--text) text-4xl font-bold my-5 mx-1 pl-12 pt-4">{item.sectionHeader}</h3>
     {/if}
-    <section class="text-(--text) section relative w-full left-[10%] opacity-0 my-auto mx-[5%]">    
-                
+    <section class="text-(--text) section w-full left-[10%] mx-[5%] my-5">    
+    
+        <div id="post-container" class="flex">
+            <div class="line"></div>
+            <div class="year font-bold">{item.year}</div>
+            <div class="box mx-7">
+                <img class="w-[{item.imgSrc.width}] h-[{item.imgSrc.height}]" src="/{item.imgSrc.src}" alt="" id="logo">
+                <p class=" mx-2 text-2xl">{item.post}</p>
+                <p class="mx-2 text-xl">{item.location}</p>
+            </div>
 
-        <div class="edu-block mt-0.5" id="post-container">
+        </div>
+
+        <!-- <div class="edu-block mt-0.5" id="post-container">
             <div class="line rounded-bl-md w-1 h-0 absolute left-[-5%] bg-red-400 opacity-0 "></div>
-            
-            <!-- <div class="marker w-4 h-4 bg-[#4a5568] rounded-[50%] absolute -left[100%] top-0"></div> -->
             
             <div class="year absolute -left-full font-bold">{item.year}</div>
 
@@ -91,6 +71,6 @@
                 <h4 class="mt-3 text-2xl">{item.post}</h4>
                 <p class="text-xl">{item.location}</p>
             </div>
-        </div>
+        </div> -->
     </section>
 </div>

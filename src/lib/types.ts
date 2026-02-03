@@ -4,5 +4,9 @@ export type myObject = {
   year: string;
   post: string;
   location: string;
-  imgSrc: string;
+  imgSrc: {
+    src: string,
+    width: string,
+    height: string
+  };
 };
