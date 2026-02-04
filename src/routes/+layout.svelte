@@ -1,14 +1,14 @@
 <script lang="ts">
-	import '../app.css';
-	import Nav from '$lib/nav.svelte';
+	import './layout.css';
+	import favicon from '$lib/assets/favicon.svg';
+
+
+	let { children } = $props();
 </script>
 
 <svelte:head>
-	<title>Atharva Tikhe</title>
+	<link rel="icon" href={favicon} />
+	<title>Atharva Tikhe</title>	
+
 </svelte:head>
-
-<Nav />
-
-<main>
-	<slot />
-</main>
+{@render children()}
