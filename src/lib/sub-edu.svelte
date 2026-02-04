@@ -5,7 +5,7 @@
 </script>
 
 <div id="institute" class=' flex flex-col md:flex-row max-sm-justify-center items-center text-white'>
-    <img src={institute.image} class="size-52" alt="">
+    <img src={institute.image.src} class="size-52 {institute.image.width}" alt="">
     <div id="text" class= "flex flex-col gap-2">
         <p class="text-2xl font-semibold">{institute.degree}</p>
         <div class= 'flex flex-row items-center gap-1'>
