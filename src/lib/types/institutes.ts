@@ -10,6 +10,7 @@ export type Institute =  {
     thesis: string,
     pi: string,
     location: string,
+    year: string,
     keywords: string    
 
 }

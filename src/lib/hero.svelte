@@ -30,13 +30,13 @@
                 </div>
 
                 <div id="linkedin">
-                    <a href="/linkedin" aria-label="Go to LinkedIn">
+                    <a href="https://www.linkedin.com/in/atharva-tikhe-986587154/" target="_blank" aria-label="Go to LinkedIn">
                     <img class="size-12 w-auto" src="icons/in-logo/LI-In-Bug.png" alt="">
                     </a>
                 </div>
 
                 <div id="github">
-                    <a href="/github" aria-label="Go to GitHub">
+                    <a href="https://github.com/Atharva-Tikhe" target="_blank" aria-label="Go to GitHub">
                     <img src="icons/GitHub Logos/SVG/GitHub_Invertocat_Black_Clearspace.svg" alt="" class="size-12 w-auto"></a>
                 </div>
 
