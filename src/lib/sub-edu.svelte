@@ -1,14 +1,14 @@
 <script lang="ts">
     import type { Institute } from "$lib/types/institutes";
-
     const {institute} = $props<{institute: Institute}>();
+
 </script>
 
 <div id="institute" class=' flex flex-col md:flex-row max-sm-justify-center items-center text-white gap-4 border-b-2 border-gray-500'>
     <div id="year-container" class="flex flex-col border-gray-500">
         <div id="year" class="font-semibold text-gray-400 ">{institute.year}</div>
     </div>
-    <img src={institute.image.src} class="{institute.image.width} pl-1 border-l-1 border-gray-500" alt="">
+    <img src={institute.image.src} class="{institute.image.width} pl-1 border-l border-gray-500" alt="">
     <div id="text" class= "flex flex-col gap-2">
         <p class="text-2xl font-semibold">{institute.degree}</p>
         <div class= 'flex flex-row items-center gap-1'>

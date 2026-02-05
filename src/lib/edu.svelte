@@ -32,7 +32,7 @@
 </script>
 
 <section class=" bg-gray-800">
-    <div class= "flex flex-col md:mx-12 md:my-10 m-16">
+    <div class= "flex flex-col md:mx-12 md:mt-10">
 
         <Institutes institute={inst1} />
 

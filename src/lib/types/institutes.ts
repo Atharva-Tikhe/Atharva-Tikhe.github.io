@@ -14,3 +14,16 @@ export type Institute =  {
     keywords: string    
 
 }
+
+export type Company = {
+    time: {year: string, duration: string},
+    location: string,
+    position: string,
+    image: {
+        src: string,
+        width: string
+    },
+    name: string,
+    experience: string,
+    skills: string
+}
