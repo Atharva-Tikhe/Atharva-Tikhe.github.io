@@ -1,0 +1,1 @@
+import{a as n,f as a}from"../chunks/98plLr0Q.js";import"../chunks/C5BNlWNQ.js";var i=a('<div class=" font-light flex h-dvh justify-center align-center"><p>Coming Soon</p></div>');function p(o){var t=i();n(o,t)}export{p as component};
